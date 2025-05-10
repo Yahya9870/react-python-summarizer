@@ -1,9 +1,13 @@
 pipeline {
   agent any
 
+  tools {
+    nodejs 'NodeJS 24.0.1' // Matches the name in Jenkins Global Tool Configuration
+  }
+
   environment {
     FRONTEND_DIR = 'frontend/vite-project'
-    BACKEND_DIR = 'backend'
+    BACKEND_DIR  = 'backend'
   }
 
   stages {
